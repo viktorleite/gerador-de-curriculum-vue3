@@ -1,42 +1,46 @@
 <template>
-  <div class="cv-content">
+  <div class="cv-content card">
     <div class="center-text">
-      <h3>Dados Pesoais</h3>
+      <h3>{{ getCurriculumData.fullName }}</h3>
+      <p>{{ getCurriculumData.address }}</p>
+      <p>{{ getCurriculumData.telephone }}</p>
+      <p>{{ getCurriculumData.email }}</p>
     </div>
 
-    <div class="center-text">
+    <div class="center-text m-top-2">
       <h5>Objetivo Profissional</h5>
-      <div class="left-text"></div>
+      <div class="left-text">
+        <p>{{ getCurriculumData.professionalGoal }}</p>
+      </div>
     </div>
 
-    <div class="center-text">
+    <div class="center-text m-top-2">
       <h5>Formação Academica</h5>
-      <div class="left-text"></div>
+      <div class="left-text">
+        {{ getCurriculumData.academicFormation }}
+      </div>
     </div>
 
-    <div class="center-text">
+    <div class="center-text m-top-2">
       <h5>Experiencia Profissional</h5>
-      <div class="left-text"></div>
+      <div class="left-text">
+        {{ getCurriculumData.professionalExperience }}
+      </div>
     </div>
 
-    <div class="center-text">
+    <div class="center-text m-top-2">
       <h5>Qualificação Profissional</h5>
       <div class="left-text">
-        <p></p>
+        {{ getCurriculumData.professionalQualification }}
       </div>
     </div>
   </div>
 </template>
 
-<style>
-.cv-content {
-  border: 1px solid red;
-  padding: 3rem;
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  computed: mapGetters(["getCurriculumData"]),
 }
-.center-text {
-  text-align: center;
-}
-.left-text {
-  text-align: left;
-}
-</style>
+</script>

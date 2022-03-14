@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* App.css */
+.header {
+    height: 60px;
+    width: 100%;
+}
+
+.side-left {
+    width: 100%;
+    padding: 3rem;
+}
+
+.side-right {
+    width: 100%;
+    padding: 3rem;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+}
+
+.fixed {
+    position: fixed;
+    top: 1rem;
+    z-index: 1;
+    overflow-x: hidden
+}
+
+.btn {
+    width: 100%;
+}
+
+.m-top-1 {
+    margin-top: 1rem;
+}
+
+.m-top-2 {
+    margin-top: 2rem;
+}
+
+/* Curriculum.css */
+.cv-content {
+    padding: 3rem;
+    width: 600px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.left-text {
+    text-align: left;
+}
+
+/* Form.css */
+
+textarea {
+    width: 100%;
+    border: 0;
+    outline: transparent;
+    resize: none;
+}
+
+@media (max-width: 960px) {
+    .fixed {
+        position: relative
+    }
+
+    .main {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .side-left {
+        padding: 1rem;
+    }
+}
